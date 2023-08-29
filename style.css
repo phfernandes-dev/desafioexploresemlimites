@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-base-white: hsl(0, 0%, 100%);
+  --color-bg-cover: hsl(283, 47%, 97%);
+  --color-font-base: hsl(244, 38%, 28%);
+  --color-font-head: hsl(320, 69%, 42%);
+  --color-base-gradient-init: hsl(242, 50%, 38%);
+  --color-base-gradient-end: hsl(244, 38%, 28%);
+}
+
+html,
+body,
+input,
+textarea {
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--color-font-base);
+}
+
+#app {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100vh;
+  width: 43rem;
+}
+
+#cover {
+  height: 68rem;
+  background-color: var(--color-bg-cover);
+}
+
+#rocketman {
+  margin: 0 3rem;
+  width: 37rem;
+  height: 37rem;
+}
+
+#cover h1 {
+  margin: 2rem 6rem .5rem;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--color-font-head);
+}
+
+#cover h2 {
+  margin: 0 6rem 3.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#arrow {
+  margin: 0 18.5rem;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 5rem 4rem;
+  background-image: linear-gradient(to right, var(--color-base-gradient-init), var(--color-base-gradient-end));
+}
+
+.card {
+  width: 35rem;
+  padding: 2.6rem;
+  border-radius: 2rem;
+  background-color: var(--color-base-white);
+}
+
+.card img {
+  margin-bottom: 2rem;
+}
+
+.card .text {
+  width: 26.5rem;
+}
+
+.card h2 {
+  color: var(--color-font-head);
+  font-weight: 900;
+  margin-bottom: 1rem;
+  font-size: 3.2rem;
+}
+
+.text p {
+  font-weight: 600;
+}
+
+#contact {
+  background-color: var(--color-bg-cover);
+}
+
+fieldset {
+  padding: 4rem 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border: none;
+}
+
+legend {
+  padding-top: 7rem;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--color-font-head);
+}
+
+
+.input-wrapper #user,
+.input-wrapper #usermail {
+  height: 4.8rem;
+  width: 35rem;
+  border-radius: 1.6rem;
+  border: 1.5px solid var(--color-font-base);
+  padding-left: 5rem;
+}
+
+#usertext {
+  height: 10rem;
+  width: 35rem;
+  border-radius: 1.6rem;
+  border: 1.5px solid var(--color-font-base);
+  padding: 1.2rem 1.6rem 1.6rem;
+}
+
+#user::placeholder {
+  color: var(--color-font-base);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+#usermail::placeholder {
+  color: var(--color-font-base);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+#usertext::placeholder {
+  color: var(--color-font-base);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+label {
+  position: absolute;
+  margin: 1.2rem;
+}
+
+.button {
+  background-image: linear-gradient(to right, var(--color-base-gradient-init), var(--color-base-gradient-end));
+  height: 4.5rem;
+  width: 15rem;
+  border-radius: 1.6rem;
+  color: var(--color-base-white);
+  border: none;
+}
+
+
+footer p {
+  padding: 3.2rem 1.6rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-base-white);
+  background-image: linear-gradient(to right, var(--color-base-gradient-init), var(--color-base-gradient-end));
+}
+
+@media (min-width: 765px) {
+  #app {
+    width: 100%;
+  }
+
+
+  #cover {
+    justify-content: center;
+    height: 84rem;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #cover h1 {
+    margin: 30rem 0 0 0;
+    font-size: 5.8rem;
+  }
+
+  #cover h2 {
+    font-size: 3.2rem;
+    margin: 0 0 18rem 0;
+  }
+
+  #arrow {
+    margin: 0;
+  }
+
+  #rocketman {
+    margin: 0;
+    width: 72rem;
+    height: 72rem;
+  }
+
+  #content {
+    flex-direction: row;
+    justify-content: center;
+    gap: 6rem;
+  }
+
+  .card {
+    width: 36rem;
+  }
+
+  .card .text {
+    width: 32rem;
+  }
+
+  .card h2 {
+    font-size: 3.5rem;
+  }
+
+
+  .card p {
+    font-size: 1.9rem;
+  }
+
+  #contact {
+    background: url(./assets/bg-contact.png) no-repeat right;
+    background-color: var(--color-bg-cover);
+    display: flex;
+    justify-content: center;
+  }
+
+  .input-wrapper #user,
+  .input-wrapper #usermail {
+    width: 59rem;
+  }
+
+  #usertext {
+    width: 59rem;
+  }
+}
